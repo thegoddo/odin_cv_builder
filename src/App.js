@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
+import PersonalInfo from "./components/PersonalInfo";
+import ExperienceInfo from "./components/ExperienceInfo";
+import EducationInfo from "./components/EducationInfo";
+import SkillsInfo from "./components/SkillsInfo";
 
 function App() {
+  const [personalData, setPersonalData] = useState({
+    firstName: "",
+    lastName: "",
+    tel: "",
+    email: "",
+    location: "",
+    title: "",
+  });
+
+  const [experiences, setExperiences] = useState([]);
+  const [educations, setEducations] = useState([]);
+  const [skills, setSkills] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <PersonalInfo
+        personalData={personalData}
+        setPersonalData={setPersonalData}
+      />
+      <ExperienceInfo
+        experiences={experiences}
+        setExperiences={setExperiences}
+      />
+      <EducationInfo educations={educations} setEducations={setEducations} />
+      <SkillsInfo skills={skills} setSkills={setSkills} />
     </div>
   );
 }
