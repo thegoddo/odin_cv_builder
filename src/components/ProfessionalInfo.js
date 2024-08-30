@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./styles/Professional.css"
 
 export default function ProfessionalInfo({ professions, setProfessions }) {
   const [profession, setProfession] = useState({

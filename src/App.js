@@ -23,22 +23,28 @@ function App() {
 
   return (
     <div>
-      <PersonalInfo
-        personalInfo={personalInfo}
-        setPersonalInfo={setPersonalInfo}
-      />
-      <EducationInfo educations={educations} setEducations={setEducations} />
-      <ProfessionalInfo
-        professions={professions}
-        setProfessions={setProfessions}
-      />
-      <Skills skills={skills} setSkills={setSkills} />
-      <Resume
-        personalInfo={personalInfo}
-        professions={professions}
-        educations={educations}
-        skills={skills}
-      />
+      <div className="split left">
+        {" "}
+        <PersonalInfo
+          personalInfo={personalInfo}
+          setPersonalInfo={setPersonalInfo}
+        />
+        <EducationInfo educations={educations} setEducations={setEducations} />
+        <ProfessionalInfo
+          professions={professions}
+          setProfessions={setProfessions}
+        />
+        <Skills skills={skills} setSkills={setSkills} />
+      </div>
+      <div className="split right">
+        {" "}
+        <Resume
+          personalInfo={personalInfo}
+          professions={professions}
+          educations={educations}
+          skills={skills}
+        />
+      </div>
     </div>
   );
 }

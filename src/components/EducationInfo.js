@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./styles/Education.css";
 
 export default function EducationInfo({ educations, setEducations }) {
   const [education, setEducation] = useState({

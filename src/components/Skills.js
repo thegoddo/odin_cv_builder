@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./styles/Skills.css";
 
 export default function Skills({ skills, setSkills }) {
   const [skill, setSkill] = useState({
