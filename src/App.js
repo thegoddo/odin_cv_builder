@@ -2,36 +2,36 @@
 import "./App.css";
 import { useState } from "react";
 import PersonalInfo from "./components/PersonalInfo";
-import ExperienceInfo from "./components/ExperienceInfo";
 import EducationInfo from "./components/EducationInfo";
-import SkillsInfo from "./components/SkillsInfo";
+import ProfessionalInfo from "./components/ProfessionalInfo";
+import Skills from "./components/Skills";
 
 function App() {
-  const [personalData, setPersonalData] = useState({
-    firstName: "",
-    lastName: "",
+  const [personalInfo, setPersonalInfo] = useState({
+    fName: "",
+    lName: "",
     tel: "",
     email: "",
-    location: "",
-    title: "",
+    linkedIn: "",
+    github: "",
   });
 
-  const [experiences, setExperiences] = useState([]);
+  const [professions, setProfessions] = useState([]);
   const [educations, setEducations] = useState([]);
   const [skills, setSkills] = useState([]);
 
   return (
     <div>
       <PersonalInfo
-        personalData={personalData}
-        setPersonalData={setPersonalData}
-      />
-      <ExperienceInfo
-        experiences={experiences}
-        setExperiences={setExperiences}
+        personalInfo={personalInfo}
+        setPersonalInfo={setPersonalInfo}
       />
       <EducationInfo educations={educations} setEducations={setEducations} />
-      <SkillsInfo skills={skills} setSkills={setSkills} />
+      <ProfessionalInfo
+        professions={professions}
+        setProfessions={setProfessions}
+      />
+      <Skills skills={skills} setSkills={setSkills} />
     </div>
   );
 }
