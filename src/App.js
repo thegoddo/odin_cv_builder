@@ -5,6 +5,7 @@ import PersonalInfo from "./components/PersonalInfo";
 import EducationInfo from "./components/EducationInfo";
 import ProfessionalInfo from "./components/ProfessionalInfo";
 import Skills from "./components/Skills";
+import Resume from "./components/Resume";
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({
@@ -32,6 +33,12 @@ function App() {
         setProfessions={setProfessions}
       />
       <Skills skills={skills} setSkills={setSkills} />
+      <Resume
+        personalInfo={personalInfo}
+        professions={professions}
+        educations={educations}
+        skills={skills}
+      />
     </div>
   );
 }
